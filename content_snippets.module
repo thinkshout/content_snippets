@@ -35,3 +35,13 @@ function content_snippets_help($route_name, RouteMatchInterface $route_match) {
 function content_snippets_retrieve($snippetname) {
   return \Drupal::config('content_snippets.content')->get($snippetname);
 }
+
+/**
+ * Implements hook_template_preprocess_default_variables_alter().
+ *
+ * Provide snippets to the template system.
+ */
+function content_snippets_template_preprocess_default_variables_alter(&$variables) {
+  \Drupal::config('content_snippets.content')->get();
+  $variables['contentSnippets'] = \Drupal::config('content_snippets.content')->get();
+}
