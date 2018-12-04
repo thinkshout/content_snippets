@@ -1,5 +1,5 @@
 {
-  "name": "drupal/content_snippets",
+  "name": "thinkshout/content_snippets",
   "type": "drupal-module",
   "description": "Content Snippets",
   "keywords": ["Drupal"],
