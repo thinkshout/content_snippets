@@ -24,6 +24,20 @@ function content_snippets_help($route_name, RouteMatchInterface $route_match) {
 }
 
 /**
+ * Implements hook_permission().
+ */
+function content_snippets_permission() {
+  $return = [];
+
+  $return['content_snippets_administer'] = [
+    'title' => t('Administer Content Snippets'),
+    'description' => t('Access to add, edit, or remove Content Snippet variables.'),
+  ];
+
+  return $return;
+}
+
+/**
  * The key API function for the module, returns the current value for a snippet.
  *
  * @param string $snippetname
