@@ -49,7 +49,7 @@ class ContentSnippets extends ConfigFormBase {
     // Add form header describing purpose and use of form.
     $form['header'] = [
       '#type' => 'markup',
-      '#markup' => t('<h3>Create custom text snippets for use on the site.</h3><p>The contents of the snippets can be edited by Content Editors. The snippets can be used in code, either using <code>content_snippets_retrieve(snippetname)</code> or with tokens.</p>'),
+      '#markup' => t('<h3>Create custom text snippets for use on the site.</h3><p>The contents of the snippets can be edited by Content Editors. The snippets can be used in code, either using <code>content_snippets_retrieve(snippetname)</code>, with tokens or in template files using <code>{{ contentSnippets.snippetname }}</code>.</p>'),
     ];
 
     $typeoptions = [
