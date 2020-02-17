@@ -21,7 +21,8 @@ function content_snippets_token_info() {
     // Site-wide global token.
     $info['tokens']['content_snippets'][$key] = [
       'name' => $key,
-      'description' => t('description'),
+      'description' => NULL,
+      'module' => 'content_snippets',
     ];
   }
 
