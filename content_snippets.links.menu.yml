@@ -15,7 +15,7 @@ content_snippets.content.custom_text:
 
 content_snippets.config.snippets_config:
   title: Content Snippets Admin
-  description: "A place to configure little bits of content that appear on the site, like error messages or labels, that can't be configured elsewhere."
+  description: "A place to create content snippets that can be edited by content editor, and leveraged in custom code."
   route_name: content_snippets.config.snippets_config
   parent: content_snippets.config.admin_index
   weight: 0
