@@ -47,7 +47,6 @@ class ContentSnippetsEdit extends ConfigFormBase {
     $config = $this->config('content_snippets.items')->get();
     $snippets = $this->config('content_snippets.content')->get();
 
-    // Add form header describing purpose and use of form.
     $form['header'] = [
       '#type' => 'markup',
       '#markup' => '<h3>Set custom text used on the site.</h3><p>Configure text that appears on the site outside of specific pieces of content or blocks. Use with care: the effect is immediate.</p>',

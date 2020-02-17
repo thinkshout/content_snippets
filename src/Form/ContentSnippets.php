@@ -46,7 +46,6 @@ class ContentSnippets extends ConfigFormBase {
 
     $form = parent::buildForm($form, $form_state);
 
-    // Add form header describing purpose and use of form.
     $form['header'] = [
       '#type' => 'markup',
       '#markup' => t('<h3>Create custom text snippets for use on the site.</h3><p>The contents of the snippets can be edited by Content Editors. The snippets can be used in code, either using <code>content_snippets_retrieve(snippetname)</code>, with tokens <code>[content_snippets:snippetname]</code> or in template files using <code>{{ contentSnippets.snippetname }}</code>.</p>'),
@@ -72,6 +71,7 @@ class ContentSnippets extends ConfigFormBase {
         '#options' => $typeoptions,
         '#default_value' => $type,
       ];
+      // Add the delete option just for existing snippets.
       $form['snippets'][$key]['#options']['delete'] = 'Delete';
     }
 
